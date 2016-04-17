@@ -1,0 +1,27 @@
+package com.PToH.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.common.DbConnection;
+
+@RestController
+public class Users {
+	
+	@RequestMapping(value="Users/{FirstName}/{LastName}/{UserName}/{Password}/{Email}")
+	public String greeting(@PathVariable String FirstName,
+					       @PathVariable String LastName,
+					       @PathVariable String UserName,
+					       @PathVariable String Password,
+					       @PathVariable String Email){
+		
+		
+		//DbConnection conex= new DbConnection();
+		
+		//conex.desconectar();
+		
+		return "Hello " + FirstName + " " + LastName + " " + UserName + " " + Password + " " + Email ;
+	}
+
+}
